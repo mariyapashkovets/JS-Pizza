@@ -1,3 +1,602 @@
 @mainColor: blue;
 
 @import "pizza/pizza-card";
+@listsWidth: 330px;
+@bodyColor: #fffff7;
+@leftWidth: 998px;
+@ribbonWidth: 100px;
+@padding: 10px;
+
+body {
+  background-color: @bodyColor;
+  width: 100%;
+  height: 100%;
+  min-width: @listsWidth * 2.5 + @padding * 2;
+}
+
+.left {
+  padding-right: @listsWidth + @padding;
+  padding-left: @padding;
+
+}
+
+.left .container {
+  max-width: 900px;
+  width: 100%;
+  margin: auto;
+  z-index: 2;
+  box-sizing: border-box;
+
+}
+
+.list {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  background-color: white;
+  height: 100%;
+  width: @listsWidth;
+  z-index: 80;
+  display: inline-block;
+}
+
+.container .blackPanel {
+  margin-left: -80px;
+  width: @leftWidth + @padding * 2.5;
+  height: 90px;
+  opacity: 0.8;
+  background-color: black;
+  z-index: 70;
+  position: relative;
+  position: fixed;
+  box-sizing: border-box;
+  display: block;
+}
+
+.list .forBuy {
+  height: 60px;
+  display: inline-block;
+  font-size: 20px;
+  margin-top: 30px;
+  margin-left: 10px;
+  text-align: center;
+}
+
+.button4 {
+  display: inline-block;
+  width: 18px;
+  height: 18px;;
+  vertical-align: middle;
+  line-height: 18px;
+  text-indent: initial;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  font-size: 13px;
+  font-weight: normal;
+  border-radius: 9px;
+  background: #ff8833;
+  border: none;
+}
+
+.list .clearList {
+  font-size: 10px;
+  display: inline-block;
+  color: grey;
+  margin-left: 8px;
+}
+
+.list .boughtPizzas {
+  background-color: #f1f1f1;
+  height: 450px;
+  width: @listsWidth;
+  display: inline-block;
+}
+
+.button1 {
+  display: inline-block;
+  background: #eb9800;
+  border-radius: 5px;
+  font-size: 15px;
+  border: 1px solid #eb9800;
+  box-shadow: 0.1px 2px #eb9800;
+  color: white;
+  width: 250px;
+  height: 40px;
+  margin-left: 25px;
+  margin-top: 15px;
+}
+
+.button8 {
+  display: inline-block;
+  width: 80px;
+  color: orange;
+  background-color: @bodyColor;
+  font-size: 14px;
+  margin-left: 10px;
+  border: @bodyColor;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.sea .button8 {
+  width: 150px;
+}
+
+.ananas .button8 {
+  width: 130px;
+}
+
+.label-danger {
+  position: absolute;
+  right: -10px;
+  top: -7px;
+  font-size: 18px;
+  color: white;
+}
+
+.label-success {
+  position: absolute;
+  right: -15px;
+  top: -10px;
+  font-size: 18px;
+  color: white;
+}
+
+.pizza-card {
+  position: relative;
+}
+
+.btn-md {
+  margin-top: 5px;
+  width: 50px;
+  height: 35px;
+}
+
+.template .item {
+  width: @listsWidth;
+  height: 80px;
+  font-size: 20px;
+  margin-top: 16px;
+  margin-left: 20px;
+  color: #ea9600;
+  position: relative;
+}
+
+.item .weight-image {
+  margin-left: 25px;
+}
+
+.weight {
+  margin-left: 6px;
+  font-size: 14px;
+  color: black;
+  text-decoration: none;
+}
+
+.size {
+  margin-left: 6px;
+  font-size: 14px;
+  color: black;
+  text-decoration: none
+}
+
+.item .price {
+  font-size: 14px;
+  color: black;
+}
+
+.item .btn-success {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.item .btn-danger {
+  line-height: 5px;
+
+}
+
+.item .btn-default {
+  width: 26px;
+  height: 26px;
+}
+
+.btn-circle {
+  width: 26px;
+  height: 26px;
+  line-height: 26px;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 13px;
+  padding: 0;
+}
+
+.item .quantityOnePizza {
+  font-size: 14px;
+  text-decoration: none;
+  color: black;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.btn-warning {
+  margin-top: -5px;
+  margin-left: -10px;
+}
+
+.btn-default .glyphicon-remove {
+  font-size: 12px;
+  color: orange;
+  line-height: 26px;
+  padding: 0;
+  line-height: 12px;
+  text-align: left;
+  vertical-align: text-top;
+  margin-top: 3px;
+}
+
+.item .btn-default {
+  margin-left: 10px;
+}
+
+.item .rightPart {
+  position: absolute;
+  top: 2px;
+  bottom: 10px;
+  right: 10px;
+}
+
+.template .space {
+  height: 30px;
+  display: inline-block;
+}
+
+.boughtPizzas .template {
+  border-bottom: #dbdbdb solid 1px;
+}
+
+.buy .totalPrice {
+  margin-left: 100px;
+  font-size: 18px;
+}
+
+.buy .sum {
+  margin-left: 5px;
+  font-size: 15px;
+}
+
+.container .row {
+  padding-top: 20px;
+  padding-left: 20px;
+  z-index: 1;
+}
+
+.pizza-card h3 {
+  background-color: white;
+  color: orange;
+  font-size: 26px;
+}
+
+.miniDescrip {
+  font-size: 12px;
+  color: #919191;
+  height: 22px;
+  display: inline-block;
+}
+
+.priceSmall {
+  width: 50px;
+  height: 32px;
+  display: inline-block;
+  font-size: 32px;
+}
+
+.priceBig {
+  width: 50px;
+  height: 32px;
+  display: inline-block;
+  font-size: 32px;
+}
+
+.leftPrice {
+  margin-left: 20px;
+  width: 70px;
+  height: 60px;
+  display: inline-block;
+}
+
+.rightPrice {
+  margin-left: 60px;
+  width: 70px;
+  height: 60px;
+  display: inline-block;
+}
+
+.grn {
+  margin-left: 10px;
+  height: 30px;
+  width: 50px;
+  display: inline-block;
+}
+
+.margarita {
+  margin-top: -1px;
+  margin-left: 100px;
+}
+
+.dolceMare {
+  margin-top: -5px;
+  margin-left: 100px;
+}
+
+.blackPanel .ribbon {
+  display: inline-block;
+  width: 100px;
+  height: 89px;
+  background-color: #e09200;
+  margin-left: 10px;
+}
+
+.ribbon .KMAPIZZA {
+  display: inline-block;
+  width: 100px;
+  height: 89px;
+  position: relative;
+
+}
+
+.KMAPIZZA .im {
+  position: absolute;
+  transform: rotateZ(180deg);
+  left: 0px;
+  bottom: -15px;
+}
+
+.KMAPIZZA .titleKMA {
+  width: 80px;
+  height: 35px;
+  font-size: 20px;
+  color: white;
+  margin-top: 15px;
+  margin-left: 18px;
+  display: inline-block;
+}
+
+.KMAPIZZA .titlePIZZA {
+  width: 80px;
+  height: 40px;
+  font-size: 24px;
+  color: white;
+  display: inline-block;
+  margin-left: 18px;
+
+}
+
+.blackPanel .info1 {
+  width: @leftWidth - @padding * 11;
+  height: 45px;
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  left: 130px;
+  border-bottom: #b2b2b2 solid 1px;
+
+}
+
+.info3 .info2 {
+  height: 45px;
+  display: inline-block;
+  position: absolute;
+  top: 0px;
+  left: 100px;
+  font-size: 16px;
+  color: #cacaca;
+  width: 100px;
+}
+.info3 .login2 {
+  height: 45px;
+  display: inline-block;
+  position: absolute;
+  top: 0px;
+  left: 195px;
+
+}
+
+.blackPanel .info3{
+  height: 45px;
+  display: inline-block;
+  position: absolute;
+  top: 60px;
+  font-size: 16px;
+  left: 30px;
+  width: @leftWidth - @padding * 11;
+}
+
+.info1 .number {
+  font-size: 20px;
+  color: #cacaca;
+  display: inline-block;
+
+}
+
+.info1 .time {
+  margin-left: 40px;
+  font-size: 12px;
+  color: #cacaca;
+  display: inline-block;
+}
+
+.info1 .deliver {
+  margin-left: 40px;
+  font-size: 16px;
+  color: #cacaca;
+  display: inline-block;
+}
+
+.info1 .login {
+  margin-left: 190px;
+  font-size: 16px;
+}
+
+.bottomRibbon .block {
+  position: relative;
+  position: fixed;
+  width: 100px;
+  height: 120px;
+  background-color: #e09200;
+  z-index: 21;
+  bottom: 0px;
+  left: 10px;
+}
+
+.bottomRibbon .append {
+  bottom: 113px;
+  left: 10px;
+  position: absolute;
+  position: fixed;
+
+  z-index: 22;
+}
+
+.block .tha {
+  font-size: 20px;
+  display: inline-block;
+  height: 20px;
+  width: 100px;
+  color: white;
+  margin-left: 15px;
+}
+
+.block .week {
+  font-size: 20px;
+  display: inline-block;
+  height: 20px;
+  width: 100px;
+  color: white;
+  margin-left: 15px;
+}
+
+.block .onAll {
+  font-size: 20px;
+  display: inline-block;
+  height: 35px;
+  width: 70px;
+  color: white;
+  margin-left: 15px;
+  border-bottom: 2px dotted #d16301;
+}
+
+.block .discount {
+  display: inline-block;
+  height: 30px;
+  color: white;
+  width: 100px;
+  margin-left: 26px;
+  margin-top: 4px;
+  font-size: 16px;
+}
+
+.container .classification {
+  margin-top: 90px;
+  margin-left: -15px;
+  display: inline-block;
+  height: 120px;
+  width: @leftWidth;
+}
+
+.classification .topClass {
+  height: 45px;
+  display: inline-block;
+  color: black;
+  font-size: 30px;
+  margin-left: 400px;
+  margin-top: 10px;
+}
+
+.classification .botClass {
+  height: 45px;
+  width: @leftWidth;
+  display: inline-block;
+  color: black;
+  font-size: 30px;
+  margin-left: 230px;
+  margin-top: 10px;
+  z-index: 69;
+}
+
+.container .proj {
+  display: inline-block;
+  width: 998px;
+  height: 150px;
+  background-color: white;
+  color: #b2b2b2;
+  font-size: 15px;
+  text-align: center;
+  vertical-align: middle;
+  border-top: #dbdbdb solid 1px;
+  margin-left: -14px;
+}
+@media (max-width:992px) {
+
+  .list{
+    max-width: 280px;
+    min-width: 280px;
+    width: 280px;
+  }
+  .botClass {
+    padding-right: 500px;
+    height: 90px;
+    text-align: left;
+vertical-align: middle
+
+  }
+}
+@media (max-width:768px) {
+
+  .list {
+    max-width: 200px;
+    min-width: 200px;
+    width: 200px;
+  }
+
+  .botClass {
+    padding-right: 700px;
+    height: 100px;
+    text-align: center;
+    line-height: 90px;
+    .pizza-card{
+      padding-top: 150px;
+    }
+  }
+}
+@media (max-width:400px ) {
+.left{
+  width:180px;
+}
+  .number{
+    font-size: 12px;
+  }
+  .list{
+    max-width: 200px;
+    min-width: 200px;
+    width: 200px;
+  }
+  .botClass {
+    padding-right: 700px;
+    height: 150px;
+    line-height: 100px;
+    text-align: center;
+
+  }.botClass {
+     padding-right: 700px;
+     height: 100px;
+     text-align: center;
+     line-height: 90px;
+
+   }
+
+  .thumbnail{
+    padding-top: 150px;
+  }
+}
+
